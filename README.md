@@ -50,7 +50,7 @@ pip install biopython transformers datasets huggingface_hub accelerate umap-lear
 
 # Further Resources
 
-- [How Nucleotide Transformer Fine-Tuned Their Models](https://github.com/huggingface/notebooks/blob/main/examples/nucleotide_transformer_dna_sequence_modelling.ipynb)
+- [How Instadeepai Fine-Tuned Their Nucleotide Transformer](https://github.com/huggingface/notebooks/blob/main/examples/nucleotide_transformer_dna_sequence_modelling.ipynb)
 
 # References
 
