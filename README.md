@@ -25,7 +25,7 @@ Packages needed to use the nucleotide-transformer model:
 To install the required packages, run the following command:
 
 ```bash
-pip install biopython transformers datasets huggingface_hub accelerate
+pip install biopython transformers datasets huggingface_hub accelerate umap-learn
 ```
 
 # Workflow
