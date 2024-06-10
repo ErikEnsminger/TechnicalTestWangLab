@@ -6,10 +6,19 @@ This TechnicalTestWangLab repository aims to classify DNase1 hypersensitivity si
 
 In this repository, you will find the following:
 1. Scripts to create and filter the DHS dataset for downstream classification tasks.
-2. Fine-tuning a nucleotide transformer 500M_human_ref model on the DHS dataset.
-3. Extracting embeddings from the fine-tuned model and performing PCA analysis on embeddings 
+    - `TechnicalTestWangLab/code/master_dataset.ipynb`
+    - `TechnicalTestWangLab/code/filter_dataset.ipynb`
 
-The scripts were all run in `Google Colab`, under `Python version 3.10.12` using one **L4 GPU**. 
+2. Fine-tuning a nucleotide transformer 500M_human_ref model on the DHS dataset.
+    - `TechnicalTestWangLab/code/fine_tun_DHS_model.ipynb`
+    - Associated Figures can be found in: `TechnicalTestWangLab/figures/`
+3. Extracting embeddings from the fine-tuned model and performing PCA analysis on embeddings 
+    - `TechnicalTestWangLab/code/embeddings_DHS_NT_model.ipynb`
+    - Associated Figures can be found in: `TechnicalTestWangLab/figures/`
+
+The scripts were all run in `Google Colab`, under `Python version 3.10.12`. \
+Due to limited available GPU on my HPC. I used one **L4 GPU**. 
+
 
 ## Dependencies
 
@@ -29,7 +38,7 @@ pip install biopython transformers datasets huggingface_hub accelerate umap-lear
 ```
 
 # Workflow
-
+**Note:** for simplicity, steps 1 and 2 can be skipped as data file is directly imported from google drive in step 3. 
 1. **Run `master_dataset.ipynb`**  
    This will process DHS peaks from Meuleamn et al.
 2. **Run `filter_master.ipynb`**  
@@ -43,9 +52,9 @@ pip install biopython transformers datasets huggingface_hub accelerate umap-lear
    - Note: Use a *GPU L4* from Google Colab for this step.
 
 # Usage
-1. Open [Google Colab](https://colab.research.google.com/) and upload the notebooks and datasets.
+1. Open [Google Colab](https://colab.research.google.com/) and upload the `.ipynb` files.
 2. Follow the workflow as outlined in `Workflow`.
-3. The `fine_tune_DHS_NT_model.ipynb` will create a new folder within google drive to save model and datasets and will be called again in `embeddings_DHS_NT_model.ipynb`
+3. The `fine_tune_DHS_NT_model.ipynb` will create a new folder within google drive to save model, and datasets, which are then automatically called when running `embeddings_DHS_NT_model.ipynb`
 
 
 # Further Resources
